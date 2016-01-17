@@ -4,7 +4,9 @@ export class AngularModule {
 
   constructor(moduleName, deps = []) {
 
-      this.module = angular.module(moduleName, deps);
+    deps.map((dep) => dep.module);
+
+    this.module = angular.module(moduleName, deps);
   }
 
   directive(name, constructorFn) {
@@ -80,7 +82,7 @@ export class AngularModule {
 
     this.module
       .value(key, val);
-
+
     return this;
   }
 
@@ -88,6 +90,14 @@ export class AngularModule {
 
     this.module
       .value(key, val);
+
+    return this;
+  }
+
+  run(fn) {
+
+    this.module
+      .run(fn);
 
     return this;
   }
