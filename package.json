@@ -1,6 +1,6 @@
 {
   "name": "angular-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ES6 way to define Angular 1.x modules and register services, factories, etc. as ES6 classes.",
   "main": "src/AngularModule.js",
   "scripts": {
