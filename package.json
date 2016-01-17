@@ -1,7 +1,7 @@
 {
   "name": "angular-module",
   "version": "1.0.0",
-  "description": "ES6 awy to define Angular 1.x modules and register services, factories, etc. as ES6 classes.",
+  "description": "ES6 way to define Angular 1.x modules and register services, factories, etc. as ES6 classes.",
   "main": "src/AngularModule.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
