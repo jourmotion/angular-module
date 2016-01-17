@@ -4,7 +4,12 @@ export default class AngularModule {
 
   constructor(moduleName, deps = []) {
 
-    deps.map((dep) => dep.module);
+    deps = deps.map((dep) => {
+      if (dep instanceof AngularModule) {
+        return dep.module;
+      }
+      return dep;
+    });
 
     this.ng = angular.module(moduleName, deps);
     this.module = moduleName;
