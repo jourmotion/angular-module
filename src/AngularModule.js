@@ -1,6 +1,6 @@
 import * as util from './util';
 
-export class AngularModule {
+export default class AngularModule {
 
   constructor(moduleName, deps = []) {
 
