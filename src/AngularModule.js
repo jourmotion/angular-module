@@ -82,7 +82,7 @@ export class AngularModule {
 
     this.module
       .value(key, val);
-
+
     return this;
   }
 
