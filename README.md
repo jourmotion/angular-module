@@ -14,7 +14,7 @@ npm install --save angular-module
 
 ```js
 // app.js
-import {AngularModule} from 'angular-module';
+import AngularModule from 'angular-module';
 import * as config from './config';
 import {AppCtrl} from './AppCtrl';
 
@@ -40,9 +40,9 @@ new AngularModule('app', [
 
 ```js
 // app.js
-import {AngularModule} from 'angular-module';
-import {api} from './api/module';
-import {auth} from './auth/module';
+import AngularModule from 'angular-module';
+import api from './api/module';
+import auth from './auth/module';
 
 new AngularModule('app', [
   api,
@@ -52,18 +52,18 @@ new AngularModule('app', [
 
 ```js
 // api.js
-import {AngularModule} from 'angular-module';
+import AngularModule from 'angular-module';
 
-export const api = new AngularModule('api', [
+export default new AngularModule('api', [
 
 ]);
 ```
 
 ```js
 // auth.js
-import {AngularModule} from 'angular-module';
+import AngularModule from 'angular-module';
 
-export const auth = new AngularModule('auth', [
+export default new AngularModule('auth', [
 
 ]);
 ```
