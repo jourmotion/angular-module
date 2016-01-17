@@ -67,6 +67,12 @@ export default new AngularModule('auth', [
 
 ]);
 ```
+
+## How To Define Classes
+
+Please feel free to have a look at https://github.com/michaelbromley/angular-es6
+to see how Angular 1.x components can be defined as ES6 classes.
+
 ## License
 
 MIT
