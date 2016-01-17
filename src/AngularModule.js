@@ -6,7 +6,8 @@ export default class AngularModule {
 
     deps.map((dep) => dep.module);
 
-    this.module = angular.module(moduleName, deps);
+    this.ng = angular.module(moduleName, deps);
+    this.module = moduleName;
   }
 
   directive(name, constructorFn) {
@@ -30,7 +31,7 @@ export default class AngularModule {
         };
     });
 
-    this.module
+    this.ng
       .directive(name, util.createFactoryArray(constructorFn));
 
     return this;
@@ -38,7 +39,7 @@ export default class AngularModule {
 
   controller(name, constructorFn) {
 
-    this.module
+    this.ng
       .controller(name, constructorFn);
 
     return this;
@@ -46,7 +47,7 @@ export default class AngularModule {
 
   service(name, constructorFn) {
 
-    this.module
+    this.ng
       .service(name, constructorFn);
 
     return this;
@@ -54,7 +55,7 @@ export default class AngularModule {
 
   provider(name, constructorFn) {
 
-    this.module
+    this.ng
       .provider(name, constructorFn);
 
     return this;
@@ -62,7 +63,7 @@ export default class AngularModule {
 
   factory(name, constructorFn) {
 
-    this.module
+    this.ng
       .factory(name, util.createFactoryArray(
         util.normalizeConstructor(constructorFn)
       ));
@@ -72,7 +73,7 @@ export default class AngularModule {
 
   config(fn) {
 
-    this.module
+    this.ng
       .config(fn);
 
     return this;
@@ -80,7 +81,7 @@ export default class AngularModule {
 
   value(key, val) {
 
-    this.module
+    this.ng
       .value(key, val);
 
     return this;
@@ -88,7 +89,7 @@ export default class AngularModule {
 
   constant(key, val) {
 
-    this.module
+    this.ng
       .value(key, val);
 
     return this;
@@ -96,7 +97,7 @@ export default class AngularModule {
 
   run(fn) {
 
-    this.module
+    this.ng
       .run(fn);
 
     return this;
