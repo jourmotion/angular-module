@@ -51,7 +51,7 @@ new AngularModule('app', [
 ```
 
 ```js
-// api.js
+// /api/module.js
 import AngularModule from 'angular-module';
 
 export default new AngularModule('api', [
@@ -60,7 +60,7 @@ export default new AngularModule('api', [
 ```
 
 ```js
-// auth.js
+// /auth/module.js
 import AngularModule from 'angular-module';
 
 export default new AngularModule('auth', [
